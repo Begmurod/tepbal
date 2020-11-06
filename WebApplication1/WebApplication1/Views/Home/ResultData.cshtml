@@ -1,0 +1,215 @@
+﻿@model ResultModel
+
+@{
+    ViewData["Title"] = "Результат";
+}
+
+    <div class="text-center">
+        <h1 class="display-4"><b>Результат</b></h1>
+        <table border="1" align="center" valign="bottom">
+            <tr>
+                <td bgcolor="#7edbdd"><h3>Название</h3></td>
+                <td bgcolor="#7edbdd"><h3>Значение</h3></td>
+                <td bgcolor="#7edbdd"><h3>Измерение</h3></td>
+            </tr>
+            <tr>
+                <td> Химическая теплота топлива </td>
+                <td>@Model.Qx</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Средное значения температуры за третий период сушки</td>
+                <td>@Model.t2</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Средное значения температуры за второй период сушки</td>
+                <td>@Model.t1</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Средное значения температуры за первый период сушки</td>
+                <td>@Model.t0</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Влажность материала в начеле сушки</td>
+                <td>@Model.W1c</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Влажность материала в конце сушки</td>
+                <td>@Model.W2c</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Температура массы сущимого материала в конце</td>
+                <td>@Model.tmm2</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Расчет статьи</td>
+                <td>@Model.Q1</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Разбавление первычных продуктов сгорания воздухом в количестве xв</td>
+                <td>@Model.q2</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Потери теплоты с уходящими газами</td>
+                <td>@Model.Q2</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Химический недожог</td>
+                <td>@Model.Q3</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Потери теплоты на нагреве приспомобленний и теплопроводностью через стенки</td>
+                <td>@Model.Q5np</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Средное значение температуры между первим и вторим периодом сушки</td>
+                <td>@Model.tct1</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Средное значение температуры между третим и вторим периодом сушки</td>
+                <td>@Model.tct2</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+
+            <tr>
+                <td>Плотность телового потока</td>
+                <td>@Model.q5t</td>
+                <td>кДж</td>
+            </tr>
+
+            <tr>
+                <td>Толщину стенок камеры</td>
+                <td>@Model.Scm</td>
+                <td>м</td>
+            </tr>
+            <tr>
+                <td>Средняя поверхность стеной</td>
+                <td>@Model.F22</td>
+                <td>м<sup><small>2</small></sup></td>
+            </tr>
+            <tr>
+                <td>Потери теплоты теплопроводностью через стенку сушильной печи</td>
+                <td>@Model.Q5tct</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Потери теплоты через свод</td>
+                <td>@Model.Q5tcv</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Потери теплоты через двери сушильной камеры</td>
+                <td>@Model.Q5tdv</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Общие потери теплоты теплопроводностью</td>
+                <td>@Model.Q5trp</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Покрытие потерь топлоты теплопроводностью</td>
+                <td>@Model.Q5rp</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Потери теплоты топкой</td>
+                <td>@Model.Q5top</td>
+                <td>кДж</td>
+            </tr>
+            <tr>
+                <td>Аккумуляция теплоты стенками рабочего пространва</td>
+                <td>@Model.tctnach</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Средние изменинея температур внутренней поверхности стенок</td>
+                <td>@Model.crtct1</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Температура за время τ2</td>
+                <td>@Model.ttst2</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Температура нагрева стенки</td>
+                <td>@Model.tctnag</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Температура стенки охложденная</td>
+                <td>@Model.tctoxl</td>
+                <td><sup><small>0</small></sup>С</td>
+            </tr>
+            <tr>
+                <td>Время τ'</td>
+                <td>@Model.tt1</td>
+                <td>с</td>
+            </tr>
+            <tr>
+                <td>Время τ''</td>
+                <td>@Model.tt2</td>
+                <td>с</td>
+            </tr>
+            <tr>
+                <td>Сумма внутренней поверхности стенки</td>
+                <td>@Model.Fcm</td>
+                <td>м<sup><small>2</small></sup></td>
+            </tr>
+            <tr>
+                <td>Аккумуляция теплоты стенки печи при циклических калибаний температуры</td>
+                <td>@Model.Qv</td>
+                <td>кДж</td>
+            </tr>
+            @*<tr>
+                <td>Тепловое напряжение сводного объема топки</td>
+                <td>@Model.qob</td>
+                <td>Вт/м<sup><small>3</small></sup></td>
+            </tr>*@
+            <tr>
+                <td>Объем одной  топки</td>
+                <td>@Model.Vtop</td>
+                <td>м<sup><small>3</small></sup></td>
+            </tr>
+            <tr>
+                <td>Масса исправленной из изделий влаги</td>
+                <td>@Model.Gvl</td>
+                <td>кг</td>
+            </tr>
+        </table>
+        <div class="text-center">
+            <h5><b>Топливо</b></h5>
+           
+                <table border="1" align="center" valign="bottom">
+                    <tr>
+                        <td>Расход топливо в секунду</td>
+                        <td>@Model.tsk</td>
+                        <td>м<sup><small>3</small></sup>/с</td>
+                    </tr>
+                    <tr>
+                        <td>Всего типливо расходуется</td>
+                        <td>@Model.topl</td>
+                        <td>м<sup><small>3</small></sup></td>
+                    </tr>
+                    <tr>
+                        <td>Коэффицент полезного действия</td>
+                        <td>@Model.kpd</td>
+                        <td>%</td>
+                    </tr>
+                </table>
+             
+        </div>
+    </div>

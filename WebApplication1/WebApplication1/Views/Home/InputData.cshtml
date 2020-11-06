@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Параметры";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Исходные данные</h1>
+    <form action="/Home/ResultData">
+        <table>
+            <tr>
+                <td bgcolor="#ffcc00"><h3>Название</h3></td>
+                <td bgcolor="#ffcc00"><h3>Значение</h3></td>
+                <td bgcolor="#ffcc00"><h3>Измерение</h3></td>
+            </tr>
+            
+            <tr>
+                <td> Время работы сушильной печи 1 </td>
+                <td><input type="number" step="any" name="data.tou1" value="14400" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> Время работы сушильной печи 2</td>
+                <td><input type="number"  name="data.tou2" value="14400" /></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Теплота сгорания топлива</td>
+                <td><input type="number" step="any" name="data.Qnr" value="33500" /></td>
+                <td></td>
+            </tr>
+        </table>
+        <button type="submit">Вычислить результат</button>
+    </form>
+
+    <table></table>
+    
+  
+</div>

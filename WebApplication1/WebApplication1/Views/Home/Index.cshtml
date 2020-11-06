@@ -1,0 +1,280 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+    <div class="text-center">
+        <h1 class="display-4">Исходные данные</h1>
+        <form action="/Home/ResultData">
+            <table border="1" align="center" valign="bottom">
+                <tr>
+                    <td bgcolor="#7edbdd"><h4>Название</h4></td>
+                    <td bgcolor="#7edbdd"><h4>Значение</h4></td>
+                    <td bgcolor="#7edbdd"><h4>Измерение</h4></td>
+                </tr>
+                <tr>
+                    <td>Температура поступающего газа</td>
+                    <td><input type="number" step="any" name="data.t0nach" value="450" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура газа в конце периода 1</td>
+                    <td><input type="number" step="any" name="data.t0I" value="700" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура газа в конце периода 2</td>
+                    <td><input type="number" step="any" name="data.t0II" value="550" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура газов под сводной камеры</td>
+                    <td><input type="number" step="any" name="data.t1nach" value="200" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>t1I</td>
+                    <td><input type="number" step="any" name="data.t1I" value="400" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Технологическая температура сушки</td>
+                    <td><input type="number" step="any" name="data.t1II" value="400" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура отходящего газа</td>
+                    <td><input type="number" step="any" name="data.t2nach" value="100" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>t2I</td>
+                    <td><input type="number" step="any" name="data.t2I" value="330" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура сущильного агента, покидающего робочое пространство печи</td>
+                    <td><input type="number" step="any" name="data.t2II" value="350" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Время работы сушильной печи 1</td>
+                    <td><input type="number" step="any" name="data.tou1" value="14400" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Время работы сушильной печи 2</td>
+                    <td><input type="number" step="any" name="data.tou2" value="14400" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Начальная влажность</td>
+                    <td><input type="number" step="any" name="data.W1v" value="8" /></td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>Конечная влажность</td>
+                    <td><input type="number" step="any" name="data.W2v" value="2" /></td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>Средняя по массе начальная температура материала</td>
+                    <td><input type="number" step="any" name="data.tm1" value="275" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Средняя по массе конечная температура материала</td>
+                    <td><input type="number" step="any" name="data.tm2" value="20" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Энтальпия воденого пара при 100 C</td>
+                    <td><input type="number" step="any" name="data.in100" value="2675" /></td>
+                    <td>кДж/кг</td>
+                </tr>
+                <tr>
+                    <td>Начальная энтальпия воды</td>
+                    <td><input type="number" step="any" name="data.i1vl" value="83.8" /></td>
+                    <td>кДж/кг</td>
+                </tr>
+                <tr>
+                    <td>i2</td>
+                    <td><input type="number" step="any" name="data.i2" value="398" /></td>
+                    <td>кДж/м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Энтальрия воздуха</td>
+                    <td><input type="number" step="any" name="data.i2v" value="377" /></td>
+                    <td>кДж/м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>xв</td>
+                    <td><input type="number" step="any" name="data.xv" value="1.62" /></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>Valfa1 </td>
+                    <td><input type="number" step="any" name="data.Valfa1" value="11.11" /></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>Масса приспособления</td>
+                    <td><input type="number" step="any" name="data.Gnp" value="2000" /></td>
+                    <td>кг</td>
+                </tr>
+                <tr>
+                    <td>Температура массы приспособления в начеле</td>
+                    <td><input type="number" step="any" name="data.tnp1" value="20" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура массы приспособления в конце</td>
+                    <td><input type="number" step="any" name="data.tnp2" value="400" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Удельная теплоемкость материла приспособлений в интервале tпр2-tпр1</td>
+                    <td><input type="number" step="any" name="data.cnp" value="0.54" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура воздуха</td>
+                    <td><input type="number" step="any" name="data.tv" value="20" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Средняя температура в стенке 1</td>
+                    <td><input type="number" step="any" name="data.tct1sh" value="485" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Средняя температура в стенке 2</td>
+                    <td><input type="number" step="any" name="data.tct2sh" value="76" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Наружная поверность сушильной камеры</td>
+                    <td><input type="number" step="any" name="data.F2" value="46.5" /></td>
+                    <td>м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Внутренная поверность сушильной камеры</td>
+                    <td><input type="number" step="any" name="data.F1" value="39.5" /></td>
+                    <td>м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Период охлаждения</td>
+                    <td><input type="number" step="any" name="data.ton1" value="25200" /></td>
+                    <td>с</td>
+                </tr>
+                <tr>
+                    <td>Толщина стенки в 2 кирпича (2х0,230)</td>
+                    <td><input type="number" step="any" name="data.S" value="0.47" /></td>
+                    <td>м</td>
+                </tr>
+                <tr>
+                    <td>Сниженная  температура наружной поверхности стенок</td>
+                    <td><input type="number" step="any" name="data.tcnuz" value="50" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Тольщина первого свода</td>
+                    <td><input type="number" step="any" name="data.Svd1" value="0.115" /></td>
+                    <td>м</td>
+                </tr>
+
+                <tr>
+                    <td>Тольщина второго свода</td>
+                    <td><input type="number" step="any" name="data.Svd2" value="0.075" /></td>
+                    <td>м</td>
+                <tr>
+                    <td>Поверхность свода</td>
+                    <td><input type="number" step="any" name="data.Fcv" value="28.9" /></td>
+                    <td>м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Температура на гринице слоев</td>
+                    <td><input type="number" step="any" name="data.tcl" value="295" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура внутренной стенки</td>
+                    <td><input type="number" step="any" name="data.tcv1" value="380" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                </tr>
+                <tr>
+                    <td>Температура внешной стенки</td>
+                    <td><input type="number" step="any" name="data.tcv2" value="76" /></td>
+                    <td><sup><small>0</small></sup>С</td>
+                <tr>
+                    <td>Коэффицент теплопроводности первого материала</td>
+                    <td><input type="number" step="any" name="data.l1" value="0.528" /></td>
+                    <td>Вт/(м*К)</td>
+                </tr>
+                <tr>
+                    <td>Коэффицент теплопроводности второго материала</td>
+                    <td><input type="number" step="any" name="data.l2" value="0.129" /></td>
+                    <td>Вт/(м*К)</td>
+                </tr>
+                <tr>
+                    <td>Коэффицент теплопроводности третьего материала</td>
+                    <td><input type="number" step="any" name="data.l3" value="0.084" /></td>
+                    <td>Вт/(м*К)</td>
+                </tr>
+                <tr>
+                    <td>Поверхность двери сушильной камеры</td>
+                    <td><input type="number" step="any" name="data.Fdv" value="9.2" /></td>
+                    <td>м<sup><small>2</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Тольщина двери сушильной камеры</td>
+                    <td><input type="number" step="any" name="data.Sdv" value="0.035" /></td>
+                    <td>м</td>
+                </tr>
+                <tr>
+                    <td>Коэффицент теплопроводности четвертого материала</td>
+                    <td><input type="number" step="any" name="data.l4" value="0.65" /></td>
+                    <td>Вт/(м*К)</td>
+                </tr>
+                <tr>
+                    <td>Средняя теплоемкость</td>
+                    <td><input type="number" step="any" name="data.c" value="960" /></td>
+                    <td>кДж/(кг*К)</td>
+                </tr>
+                <tr>
+                    <td>Потери теплоты последствием химического недожога</td>
+                    <td><input type="number" step="any" name="data.q3" value="2.19" /></td>
+                    <td>кДж/м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Теплота сгорания топлива</td>
+                    <td><input type="number" step="any" name="data.Qnr" value="33500" /></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Сечение топки</td>
+                    <td><input type="number" step="any" name="data.ctop" value="0.432" /></td>
+                    <td>м<sup><small>3</small></sup></td>
+                </tr>
+                <tr>
+                    <td>Длина</td>
+                    <td><input type="number" step="any" name="data.L" value="7" /></td>
+                    <td>м</td>
+                </tr>
+            </table>
+
+            <div style="text-align: right;
+                margin-left:-10%;
+                width: 80%;
+                padding:5%"
+                 coller="#7edbdd">
+                <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal"><h6>Рассчитать тепловой баланс</h6></button>
+                <button class="btn btn-warning" type="reset"> <h6>Очистить таблицу</h6></button>
+
+            </div>
+            
+        </form>
+   
+    </div>
+
+
